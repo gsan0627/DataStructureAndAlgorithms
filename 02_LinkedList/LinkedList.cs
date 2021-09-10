@@ -8,6 +8,7 @@ namespace _02_LinkedList
     {
         private Node anchor;
         private Node job;
+        private Node job2;
 
         public LinkedList()
         {
@@ -42,6 +43,34 @@ namespace _02_LinkedList
             @new.Data = data;
             @new.Next = null;                        
             job.Next = @new;
+        }
+
+        public void Clear()
+        {
+            anchor.Next = null;
+        }
+
+        public bool ItIsEmpty()
+        {
+            return anchor.Next == null;
+        }
+
+        public Node Search(int data)
+        {
+            if (ItIsEmpty())
+                return null;
+
+            job2 = anchor;
+
+            while (job2.Next != null)
+            {
+                job2 = job2.Next;
+
+                if (job2.Data == data)
+                    return job2;
+            }
+
+            return null;
         }
 
     }

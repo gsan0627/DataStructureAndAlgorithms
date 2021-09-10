@@ -17,6 +17,14 @@ namespace _02_LinkedList
             items.Add(15);
 
             items.Transverse();
+            Console.WriteLine(items.ItIsEmpty());
+            items.Clear();
+
+            items.Transverse();
+            Console.WriteLine(items.ItIsEmpty());
+
+            Node searched = items.Search(7);
+            Console.WriteLine(searched?.Data);
 
             Console.ReadKey();
         }
