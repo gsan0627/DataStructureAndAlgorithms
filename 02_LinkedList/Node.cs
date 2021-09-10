@@ -6,6 +6,6 @@ namespace _02_LinkedList
 {
     public class Node
     {
-        
+        private int data;
     }
 }
